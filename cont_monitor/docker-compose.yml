@@ -1,0 +1,13 @@
+netdata:
+  image: titpetric/netdata:latest 
+  ports: 
+    - "19999:19999"
+  cap_add: 
+    - SYS_PTRACE 
+  volumes: 
+    - /proc:/host/proc:ro 
+    - /sys:/host/sys:ro 
+  environment: 
+    - VIRTUAL_HOST=test.domain.com 
+    - LETSENCRYPT_HOST=test.domain.com 
+    - LETSENCRYPT_EMAIL=toto@yopmail.fr
