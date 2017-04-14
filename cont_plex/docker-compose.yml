@@ -1,0 +1,15 @@
+plex:
+  image: vimagick/plex
+  ports:
+    - "32400:32400"
+  volumes:
+    - "./data:/data:ro"
+    - "./data/plex:/var/lib/plexmediaserver/Library/Application Support"
+  environment:
+    - VIRTUAL_HOST=plex.domain.com 
+    - LETSENCRYPT_HOST=plex.domain.com 
+    - LETSENCRYPT_EMAIL=toto@yopmail.fr
+  working_dir: /data
+# user: 1000:1000
+  net: host
+  restart: always
