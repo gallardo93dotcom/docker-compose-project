@@ -53,9 +53,9 @@ Le docker compose se situe dans `/compose-project/cont_wp/`
 
 Entrer : `docker-compose up -d`
 
-#Accès à l'interface via Https
+# Accès à l'interface via Https
 
-Vous l’avez compris, vous obtiendrez un site qui répondra à l’adresse https://test.domain.com Facile, non ?
+Vous l’avez compris, vous allez accéder à votre instance via https://wp.domain.com Facile, non ?
 
 # Deployer une autre instance 
 
