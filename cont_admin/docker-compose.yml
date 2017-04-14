@@ -1,0 +1,10 @@
+rancher-server: 
+  image: rancher/server:latest 
+  ports:
+    - "8080:8080" 
+  environment: 
+    - VIRTUAL_HOST=admin.domain.com 
+    - LETSENCRYPT_HOST=admin.domain.com 
+    - LETSENCRYPT_EMAIL=toto@yopmail.fr
+  volumes:  
+    - '/home/docker/rancher-server/mysql:/var/lib/mysql:rw'
