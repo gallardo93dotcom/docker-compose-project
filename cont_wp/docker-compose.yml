@@ -1,0 +1,12 @@
+db:
+  image: mariadb
+  environment:
+    - MYSQL_ROOT_PASSWORD=mypassword
+wordpress:
+  image: wordpress 
+  links:
+    - db:mysql
+  environment:
+    - VIRTUAL_HOST=wp.domain.com 
+    - LETSENCRYPT_HOST=wp.domain.com 
+    - LETSENCRYPT_EMAIL=toto@yopmail.fr
