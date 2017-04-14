@@ -49,7 +49,7 @@ environment:
     - LETSENCRYPT_EMAIL=toto@yopmail.fr
 ```
 
-Le docker compose se situe dans `/compose-project/cont_wp/`
+Le docker compose se situe dans `/docker-compose-project/cont_wp/`
 
 Entrer : `docker-compose up -d`
 
