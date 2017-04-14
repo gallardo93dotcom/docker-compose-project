@@ -20,7 +20,7 @@ chmod +x install-docker-full.sh
  
 # Déploiement du Reverse Proxy Nginx et de Let’s Encrypt
 
-Pour mettre en place un reverse proxy nginx sur Docker et supportant les connexions SSL, nous utiliserons les images jwilder-nproxy et jrcs/letsencrypt-nginx-proxy-companion.
+Pour mettre en place un reverse proxy nginx sur Docker et supportant les connexions SSL, nous utiliserons les images `jwilder-nproxy` et `jrcs/letsencrypt-nginx-proxy-companion`.
 
 Le docker compose se situe dans `/docker-compose-project/cont_proxy/docker-compose.yml`
 
