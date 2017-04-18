@@ -1,0 +1,23 @@
+mariadb:
+  image: mariadb
+  restart: always
+  environment:
+    - MYSQL_ROOT_PASSWORD=mypassword
+    - MYSQL_DATABASE=piwik
+    - MYSQL_USER=piwik
+    - MYSQL_PASSWORD=mypassword
+	- VIRTUAL_HOST=piwik.domain.com 
+    - LETSENCRYPT_HOST=piwik.domain.com 
+    - LETSENCRYPT_EMAIL=toto@yopmail.fr
+  volumes:
+    - ./database:/var/lib/mysql
+
+piwik:
+  image: harishneit/piwik:latest
+  restart: always
+  links:
+    - mariadb
+  ports:
+    - 127.0.0.1:4000:80
+  volumes:
+    - ./config:/var/www/html/piwik/config:rw
