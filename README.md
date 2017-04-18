@@ -1,7 +1,7 @@
 # Docker-compose-Project
 
-# Debian 8.4 
-Je vous conseille d'utiliser une debian 8 vierge pour réaliser ces installations
+# Debian 8.7 
+Je vous conseille d'utiliser une debian 8.7 vierge pour réaliser ces installations
 
 # Installation de git et de curl 
 
