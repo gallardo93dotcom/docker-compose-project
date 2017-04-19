@@ -24,9 +24,9 @@ Pour mettre en place un reverse proxy nginx sur Docker et supportant les connexi
 
 Le docker compose se situe dans `/docker-compose-project/cont_proxy/docker-compose.yml`
 
-Que fait ce docker-compose ?
-- Il instancie nginx-proxy et lui indique d’écouter sur les ports 80 et 443
-- Il définit le répertoire dans lequel se situeront les certificats générés par Let’s encrypt Companion soit `/srv/docker/nginx/certs`
+Que fait-il ce docker-compose ?
+- Il lance une instance d'nginx-proxy et lui indique d’écouter sur les ports 80 et 443
+- Il indique le répertoire dans lequel se situeront les certificats générés par Let’s encrypt Companion soit `/srv/docker/nginx/certs`
 
 - Il instancie nginx-proxy-companion et lui précise le répertoire dans lequel placer les certificats 
 - Il le relie à nginx-proxy
@@ -55,7 +55,7 @@ Entrer : `docker-compose up -d`
 
 # Accès à l'interface via Https
 
-Vous l’avez compris, vous allez accéder à votre instance via https://wp.domain.com Facile, non ?
+Vous l’avez compris, vous allez pouvoir accéder à votre instance via https://wp.domain.com Facile, non ?
 
 # Deployer une autre instance 
 
