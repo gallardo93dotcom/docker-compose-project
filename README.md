@@ -5,7 +5,7 @@ Je vous conseille d'utiliser une debian 8.7 vierge pour réaliser ces installati
 
 # Installation de git et de curl 
 
-* `apt-get install git curl`
+* `apt-get install git curl sudo`
 
 # Installation de Docker et Docker-Compose 
 
