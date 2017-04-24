@@ -13,7 +13,7 @@ L'installation de docker et Docker-compose se fait directement de puis le script
 
 ```
 git clone https://github.com/gallardo93dotcom/docker-compose-project.git
-cd /docker-compose-project
+cd docker-compose-project
 chmod +x install-docker-full.sh
 ./install-docker-full.sh 
 ```
