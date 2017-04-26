@@ -66,9 +66,9 @@ environment:
     - LETSENCRYPT_HOST=monapp.domain.com 
     - LETSENCRYPT_EMAIL=toto@yopmail.fr
 ```
-## Nettoyage des Images et Conteneur non-taggé 
+## Nettoyage des Images et Conteneurs non-taggés 
 
-Ce script permets de nettoyer automatiquement les images ainsi que les conteneurs non-taggé
+Ce script permets de nettoyer automatiquement les images ainsi que les conteneurs non-taggés
 
 ```
 chmod +x docker-cleanup.sh && ./docker-cleanup.sh
