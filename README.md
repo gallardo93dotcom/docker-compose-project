@@ -83,7 +83,7 @@ chmod +x docker-cleanup.sh && ./docker-cleanup.sh
 
 ## Maintenance des Images Docker 
 
-Si vous souhaitez mettre à jour toutes vos images docker , il est nécessaire de lancer le script `update-images-full.sh
+Si vous souhaitez mettre à jour toutes vos images docker , il est nécessaire de lancer le script `update-images-full.sh`
 
 ```
 chmod +x update-images-full.sh && ./update-images-full.sh
