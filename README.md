@@ -71,13 +71,16 @@ environment:
 
 Ce script va permettre de nettoyer automatiquement les images ainsi que les conteneurs non-taggé
 
-```chmod +x docker-cleanup.sh
+```
+chmod +x docker-cleanup.sh
 ./docker-cleanup.sh
 ```
 ### Que fait ce script?
 
 - Il se positionne dans le répertoire /tmp
-- Puis exécute un git clone de https://gist.github.com/wdullaer/76b450a0c986e576e98b (Code source)
-- Se place dans le répertoire ainsi créer 
-- Exécute un deplacement de docker-cleanup vers /usr/local/bin/docker-cleanup
-- Enfin il donne les droit d'exécution sur /usr/local/bin/docker-cleanup
+- Puis exécute un git clone de https://gist.github.com/wdullaer/76b450a0c986e576e98b (Code source , merci à l'auteur)
+- Se place dans le répertoire créer 
+- Exécute un déplacement de docker-cleanup vers /usr/local/bin/docker-cleanup
+- Enfin il donne les droits d'exécution sur /usr/local/bin/docker-cleanup
+
+
