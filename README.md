@@ -14,8 +14,7 @@ L'installation de docker et Docker-compose se fait directement de puis le script
 ```
 git clone https://github.com/gallardo93dotcom/docker-compose-project.git
 cd docker-compose-project
-chmod +x install-docker-full.sh
-./install-docker-full.sh 
+chmod +x install-docker-full.sh && ./install-docker-full.sh 
 ```
  
 ## Déploiement du Reverse Proxy Nginx et de Let’s Encrypt
@@ -69,11 +68,10 @@ environment:
 ```
 ## Nettoyage des Images et Conteneur non-taggé 
 
-Ce script va permettre de nettoyer automatiquement les images ainsi que les conteneurs non-taggé
+Ce script permets de nettoyer automatiquement les images ainsi que les conteneurs non-taggé
 
 ```
-chmod +x docker-cleanup.sh
-./docker-cleanup.sh
+chmod +x docker-cleanup.sh && ./docker-cleanup.sh
 ```
 ### Que fait ce script?
 
@@ -83,3 +81,10 @@ chmod +x docker-cleanup.sh
 - Exécute un déplacement de docker-cleanup vers `/usr/local/bin/docker-cleanup`
 - Enfin il donne les droits d'exécution sur `/usr/local/bin/docker-cleanup`
 
+## Maintenance des Images Docker 
+
+Si vous souhaitez mettre à jour toutes vos images docker , il est nécessaire de lancer le script `update-images-full.sh
+
+```
+chmod +x update-images-full.sh && ./update-images-full.sh
+```
