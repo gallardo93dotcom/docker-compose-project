@@ -77,10 +77,9 @@ chmod +x docker-cleanup.sh
 ```
 ### Que fait ce script?
 
-- Il se positionne dans le répertoire /tmp
-- Puis exécute un git clone de https://gist.github.com/wdullaer/76b450a0c986e576e98b (Code source , merci à l'auteur)
+- Il se positionne dans le répertoire `/tmp`
+- Puis exécute un git clone de `https://gist.github.com/wdullaer/76b450a0c986e576e98b` (Code source , merci à l'auteur)
 - Se place dans le répertoire créer 
-- Exécute un déplacement de docker-cleanup vers /usr/local/bin/docker-cleanup
-- Enfin il donne les droits d'exécution sur /usr/local/bin/docker-cleanup
-
+- Exécute un déplacement de docker-cleanup vers `/usr/local/bin/docker-cleanup`
+- Enfin il donne les droits d'exécution sur `/usr/local/bin/docker-cleanup`
 
