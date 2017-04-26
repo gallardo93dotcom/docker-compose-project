@@ -1,0 +1,38 @@
+nextcloud:
+  image: wonderfall/nextcloud
+  links:
+    - nextcloud-db:nextcloud-db  
+  environment:
+    - UID=1000
+    - GID=1000
+    - UPLOAD_MAX_SIZE=10G
+    - APC_SHM_SIZE=128M
+    - OPCACHE_MEM_SIZE=128
+    - CRON_PERIOD=15m
+    - TZ=Europe/Paris
+    - ADMIN_USER=admin            
+    - ADMIN_PASSWORD=admin        
+    - DOMAIN=localhost
+    - DB_TYPE=mysql
+    - DB_NAME=nextcloud
+    - DB_USER=nextcloud
+    - DB_PASSWORD=mypassword
+    - DB_HOST=nextcloud-db
+	  - VIRTUAL_HOST=nextcloud.domain.com 
+    - LETSENCRYPT_HOST=nextcloud.domain.com 
+    - LETSENCRYPT_EMAIL=toto@yopmail.fr
+  volumes:
+    - ./data:/data
+    - ./config:/config
+    - ./apps:/apps2
+    - ./themes:/nextcloud/themes
+
+nextcloud-db:
+  image: mariadb:latest
+  volumes:
+    - ./db:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=mypassword
+    - MYSQL_DATABASE=nextcloud
+    - MYSQL_USER=nextcloud
+    - MYSQL_PASSWORD=mypassword
