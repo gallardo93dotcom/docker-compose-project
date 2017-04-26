@@ -1,13 +1,13 @@
 # Docker-compose-Project
 
-# Debian 8.7 
+## Debian 8.7 
 Je vous conseille d'utiliser une debian 8.7 vierge pour réaliser ces installations
 
-# Installation de git et de curl 
+## Installation de git et de curl 
 
 * `apt-get install git curl sudo`
 
-# Installation de Docker et Docker-Compose 
+## Installation de Docker et Docker-Compose 
 
 L'installation de docker et Docker-compose se fait directement de puis le script installation `install-docker-full.sh`
 
@@ -18,7 +18,7 @@ chmod +x install-docker-full.sh
 ./install-docker-full.sh 
 ```
  
-# Déploiement du Reverse Proxy Nginx et de Let’s Encrypt
+## Déploiement du Reverse Proxy Nginx et de Let’s Encrypt
 
 Pour mettre en place un reverse proxy nginx sur Docker et supportant les connexions SSL, nous utiliserons les images `jwilder-nproxy` et `jrcs/letsencrypt-nginx-proxy-companion`.
 
@@ -36,7 +36,7 @@ puis `docker-compose up -d`
 
 - Vous disposez maintenant de nginx qui fonctionne en reverse proxy SSL et de son companion qui génèrera puis renouvellera automatiquement les certificats SSL.
 
-# Deploiement de Wordpress + MariaDB
+## Déploiement de Wordpress + MariaDB
 
 Pour déployer un instance Wordpress avec MariaDB qui soit signé par letsencrypt , il est impératif de préciser 3 variables d’environnement : 
 
@@ -53,11 +53,11 @@ Le docker compose se situe dans `/docker-compose-project/cont_wp/`
 
 Entrer : `docker-compose up -d`
 
-# Accès à l'interface via Https
+## Accès à l'interface via Https
 
 Vous l’avez compris, vous allez pouvoir accéder à votre instance via https://wp.domain.com Facile, non ?
 
-# Deployer une autre instance 
+## Déployer une autre instance 
 
 La procédure reste la même que pour Wordpress , cependant le docker-compose reste à modifier
 
@@ -67,4 +67,17 @@ environment:
     - LETSENCRYPT_HOST=monapp.domain.com 
     - LETSENCRYPT_EMAIL=toto@yopmail.fr
 ```
+## Nettoyage des Images et Conteneur non-taggé 
 
+Ce script va permettre de nettoyer automatiquement les images ainsi que les conteneurs non-taggé
+
+```chmod +x docker-cleanup.sh
+./docker-cleanup.sh
+```
+### Que fait ce script?
+
+- Il se positionne dans le répertoire /tmp
+- Puis exécute un git clone de https://gist.github.com/wdullaer/76b450a0c986e576e98b (Code source)
+- Se place dans le répertoire ainsi créer 
+- Exécute un deplacement de docker-cleanup vers /usr/local/bin/docker-cleanup
+- Enfin il donne les droit d'exécution sur /usr/local/bin/docker-cleanup
