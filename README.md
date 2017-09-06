@@ -1,6 +1,10 @@
 # Docker-compose-Project
 
-## Debian 8.7 
+### Tested sur ###
+ * [x] Debian 8.X
+ * [x] Debian 9.X
+ 
+## Debian 8.X 
 Je vous conseille d'utiliser une debian 8.7 vierge pour réaliser ces installations
 
 ## Installation de git et de curl 
@@ -15,6 +19,15 @@ L'installation de docker et Docker-compose se fait directement de puis le script
 git clone https://github.com/gallardo93dotcom/docker-compose-project.git
 cd docker-compose-project
 chmod +x install-docker-full.sh && ./install-docker-full.sh 
+```
+
+## Debian 9.X 
+L'installation se fera sur un debian 9.1 , ce script vous permettra d'installer docker-ce ainsi que docker-compose dans leur dernière version stable
+
+```
+git clone https://github.com/gallardo93dotcom/docker-compose-project.git
+cd docker-compose-project
+chmod +x install-dockerdebian9.sh && ./install-dockerdebian9.sh 
 ```
  
 ## Déploiement du Reverse Proxy Nginx et de Let’s Encrypt
