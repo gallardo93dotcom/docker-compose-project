@@ -50,7 +50,7 @@ puis `docker-compose up -d`
 
 ## Déploiement de Wordpress + MariaDB
 
-Pour déployer un instance Wordpress avec MariaDB qui soit signé par letsencrypt , il est impératif de préciser 3 variables d’environnement : 
+Pour déployer une instance Wordpress avec MariaDB qui soit signé par letsencrypt , il est impératif de préciser 3 variables d’environnement : 
 
 - Par Exemple :
 
