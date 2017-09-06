@@ -13,12 +13,12 @@ Je vous conseille d'utiliser une debian 8.7 vierge pour réaliser ces installati
 
 ## Installation de Docker et Docker-Compose 
 
-L'installation de docker et Docker-compose se fait directement de puis le script installation `install-docker-full.sh`
+L'installation de docker et Docker-compose se fait directement de puis le script installation `install-dockerdebian8.sh`
 
 ```
 git clone https://github.com/gallardo93dotcom/docker-compose-project.git
 cd docker-compose-project
-chmod +x install-docker-full.sh && ./install-docker-full.sh 
+chmod +x install-dockerdebian8.sh && ./install-dockerdebian8.sh 
 ```
 
 ## Debian 9.X 
