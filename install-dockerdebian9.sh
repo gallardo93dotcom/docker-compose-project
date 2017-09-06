@@ -3,11 +3,10 @@
 set -e
 
 # Update and Upgrade
-apt update
-apt upgrade
+apt update && apt upgrade
 
 #Install dependencies
-apt install apt-transport-https ca-certificates curl software-properties-common
+apt install apt-transport-https ca-certificates curl software-properties-common -y
 wget https://download.docker.com/linux/debian/gpg 
 sudo apt-key add gpg
 
@@ -15,7 +14,8 @@ sudo apt-key add gpg
 echo "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee -a /etc/apt/sources.list.d/docker.list
 
 #install docker-ce and start/enable
-apt install docker-ce
+apt update && apt upgrade
+apt install docker-ce -y
 systemctl start docker
 systemctl enable docker
 
