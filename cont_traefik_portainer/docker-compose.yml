@@ -19,7 +19,7 @@ services:
       - "traefik.backend.port=8080"
       - "traefik.frontend.entryPoints=http"
     networks:
-      - bca_int 
+      - int 
 
   portainer:
     image: portainer/portainer
