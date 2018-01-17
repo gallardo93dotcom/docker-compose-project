@@ -4,7 +4,7 @@ services:
     
   traefik:
     image: traefik:latest
-    command: --web --web.address=:8080 --docker --docker.domain=dockerpoc.domain.org --docker.watch --logLevel=DEBUG \
+    command: --web --web.address=:8080 --docker --docker.domain=docker.localhost --docker.watch --logLevel=DEBUG \
             --entryPoints='Name:http Address::80' --defaultEntryPoints='http' --accessLogsFile='log/access.log'
     hostname: traefik
     ports:
